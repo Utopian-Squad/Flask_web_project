@@ -1,0 +1,92 @@
+{% extends "base_layout.html" %} {% block content %}
+<div class="container">
+  <div class="content-section">
+    <div class="row">
+      <div class="col-md-6 mt-5 pt-4">
+        <img src="../static/img/reg.svg" width="70%" alt="" />
+      </div>
+      <div class="col-md-6">
+        <form method="POST" action="">
+          {{ form.hidden_tag() }}
+
+          <fieldset class="form-group">
+            <legend class="border-bottom mb-4">Register Today</legend>
+            <div class="form-group">
+              {{ form.username.label(class="form-control-label") }} {% if
+              form.username.errors %} {{ form.username(class="form-control
+              form-control-lg is-invalid") }}
+              <div class="invalid-feedback">
+                {% for error in form.username.errors %}
+                <span>{{ error }}</span>
+                {% endfor %}
+              </div>
+              {% else %} {{ form.username(class="form-control form-control-lg")
+              }} {% endif %}
+            </div>
+            <div class="form-group">
+              {{ form.email.label(class="form-control-label") }} {% if
+              form.email.errors %} {{ form.email(class="form-control
+              form-control-lg is-invalid") }}
+              <div class="invalid-feedback">
+                {% for error in form.email.errors %}
+                <span>{{ error }}</span>
+                {% endfor %}
+              </div>
+              {% else %} {{ form.email(class="form-control form-control-lg") }}
+              {% endif %}
+            </div>
+            <div class="form-group">
+              {{ form.password.label(class="form-control-label") }} {% if
+              form.password.errors %} {{ form.password(class="form-control
+              form-control-lg is-invalid") }}
+              <div class="invalid-feedback">
+                {% for error in form.password.errors %}
+                <span>{{ error }}</span>
+                {% endfor %}
+              </div>
+              {% else %} {{ form.password(class="form-control form-control-lg")
+              }} {% endif %}
+            </div>
+            <div class="form-group">
+              {{ form.confirm_password.label(class="form-control-label") }} {%
+              if form.confirm_password.errors %} {{
+              form.confirm_password(class="form-control form-control-lg
+              is-invalid") }}
+              <div class="invalid-feedback">
+                {% for error in form.confirm_password.errors %}
+                <span>{{ error }}</span>
+                {% endfor %}
+              </div>
+              {% else %} {{ form.confirm_password(class="form-control
+              form-control-lg") }} {% endif %}
+            </div>
+          </fieldset>
+          <div class="form-group">
+            {{ form.submit(class="btn btn-success") }}
+          </div>
+          <div class="border-top pt-3">
+            <small>
+              Already Have An Account?
+              <a class="ml-2" href="{{ url_for('login') }}">Sign In</a>
+            </small>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  body a {
+    color: #212121;
+  }
+</style>
+
+{% endblock content %} {% block mysvg%}
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+  <path
+    fill="#8FFE8F"
+    fill-opacity="1"
+    d="M0,32L26.7,42.7C53.3,53,107,75,160,85.3C213.3,96,267,96,320,106.7C373.3,117,427,139,480,122.7C533.3,107,587,53,640,42.7C693.3,32,747,64,800,80C853.3,96,907,96,960,90.7C1013.3,85,1067,75,1120,101.3C1173.3,128,1227,192,1280,186.7C1333.3,181,1387,107,1413,69.3L1440,32L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"
+  ></path>
+</svg>
+{%endblock%}

@@ -1,0 +1,86 @@
+{% extends "base_layout.html" %} {% block content %}
+<main role="main" class="container">
+  {% for row in books|batch(2) %}
+  <div class="row pt-4">
+    {% for column in row %}
+    
+    <div class="col-md-6">
+    <div class="card mb-3" style="background-color: #212121; opacity:0.6;">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <img
+          class=""
+          src="http://covers.openlibrary.org/b/isbn/{{ column.isbn }}-M.jpg?default=false"
+          alt="" height="200px"
+        />
+        </div>
+
+        <div class="col-md-8" style="background-color: #212121;">
+          <div class="card-body" style="background-color: #212121;">
+           
+            <p class="card-text"> <div class="col-md-8">
+              <h4>{{column.title}}</h4>
+              <h5>{{column.author}}</h5>
+              <h6>{{column.isbn}}</h6>
+              <div>
+                <a href="/detail/{{ column.isbn }}">Detail</a>
+              </div>
+            </div></p>
+            
+          </div>
+        </div>
+        <hr>
+      </div>
+    </div>
+  </div>
+  
+    {% endfor %}
+  </div>
+  {% endfor %}
+</main>
+<div class="row">
+  <div class="col-sm-2 offset-md-3 mt-5 p-5">
+    {% if request.args.get('page') == '1' or request.args.get('page')|int == 0
+    %}
+    <p></p>
+    {% else %}
+    <a href="/result?book={{ request.args.get('book') }}&page={{ page - 1 }}"
+      ><i class="fa fa-chevron-circle-left"></i>&nbsp;Prev</a
+    >
+    {% endif %}
+  </div>
+  <div class="col-sm-2 mt-5 p-5">
+    current page {{ request.args.get('page') or 1}}
+  </div>
+  <div class="col-sm-3 mt-5 p-5">
+    {% if numberofbooks < 10 %}
+    <p></p>
+    {% else %}
+    <a href="/result?book={{ request.args.get('book') }}&page={{ page + 1 }}"
+      >Next&nbsp;<i class="fa fa-chevron-circle-right"></i
+    ></a>
+    {% endif %}
+  </div>
+</div>
+<style>
+  body {
+    background: linear-gradient(rgba(0, 0, 0, 0.63), rgba(0, 0, 0, 0.8)),
+      url(../static/img/bgo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    color: white;
+  }
+  a{
+    color: #8FFE8F;
+  }
+  a:hover{
+    color: #5ffa5f;
+    text-decoration: none;
+  }
+  hr {
+  border: 10px solid #5ffa5f;
+  border-radius: 5px;
+}
+</style>
+{% endblock content %}

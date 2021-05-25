@@ -1,0 +1,173 @@
+{% extends 'base_layout.html'%} {% block content%}
+<main role="main" class="container">
+  <div class="">
+    <div class="media">
+      <img class="mr-3 rounded" src={{book[1]['imageLinks']["thumbnail"]}}
+      alt="Generic placeholder image">
+      <div class="media-body">
+        <div class="d-flex justify-content-between align-items-center">
+          <h5 class="mt-0 display-4">{{book[0].title}}</h5>
+          <p>ISBN - {{book[0].isbn}}</p>
+        </div>
+        <h5 class="text-muted">{{book[0].author}}</h5>
+        {{book[1].description}}
+        <div class="mt-3 d-flex flex-wrap">
+          {% for i in categ %}
+          <span class="rounded bg-primary py-1 pb-2 px-2 mr-2 mb-2 text-white"
+            >{{i}}</span
+          >
+          {% endfor %}
+        </div>
+
+        <div class="d-flex align-items-center">
+          <div>
+            {% for i in range (val) %}
+            <span>&#11088;</span>
+            {% endfor %} ({{book[1].averageRating}})
+          </div>
+          <p class="mt-4 ml-5 mr-5 text-muted">
+            <i class="fa fa-address-book"></i> {{book[1].pageCount}} Pages
+          </p>
+          <p class="mt-4 text-muted">
+            <i class="fa fa-clock-o"></i> Publihsed at {{book[0].year}}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mt-5">
+    <h4>Rating ({{book[1].ratingsCount + rc}})</h4>
+    {% for reviews in all_reviews %}
+    <div class="mb-3 border border-secondary rounded px-2 py-3">
+      <div class="d-flex justify-content-between align-items-center">
+        <h5>{{ reviews.name }}</h5>
+        <p class="text-muted text-light">
+          <i class="fa fa-clock-o"></i> {{ reviews.date }}
+        </p>
+      </div>
+      <div>
+        {% for i in range (reviews.rating | int) %}
+        <span>&#11088;</span>
+        {% endfor %}
+      </div>
+      <p class="rounded py-3 px-3 my-1 border-secondary bg-light text-muted">
+        {{ reviews.comment }}
+      </p>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="mt-3 card">
+    <form method="POST" action="" class="card-body">
+      {{ form.hidden_tag() }}
+      <fieldset class="form-group">
+        <div class="form-group">
+          {{ form.rating.label(class="form-control-label") }} {% if
+          form.rating.errors %} {{ form.rating(class="form-control
+          form-control-lg is-invalid") }}
+          <div class="invalid-feedback">
+            {% for error in form.rating.errors %}
+            <span>{{ error }}</span>
+            {% endfor %}
+          </div>
+          {% else %} {{ form.rating(class="form-control form-control-lg ") }} {%
+          endif %}
+        </div>
+        <div class="form-group">
+          {{ form.content.label(class="form-control-label") }} {% if
+          form.content.errors %} {{ form.content(class="form-control
+          form-control-lg is-invalid") }}
+          <div class="invalid-feedback">
+            {% for error in form.content.errors %}
+            <span>{{ error }}</span>
+            {% endfor %}
+          </div>
+          {% else %} {{ form.content(class="form-control form-control-lg ") }}
+          {% endif %}
+        </div>
+      </fieldset>
+      <div class="form-group d-flex justify-content-end">
+        {{ form.submit(class="btn btn-success w-25 bg-success") }}
+      </div>
+    </form>
+  </div>
+  <!-- <div class="row mt-5">
+    <div class="col-md-3 offset-md-1">
+      <img src={{book[1]['imageLinks']["thumbnail"]}} alt="" />
+    </div>
+    <div class="col-md-8 col-12">
+      <div><strong>Title: </strong> {{book[0].title}}</div>
+      <div><strong>ISBN: </strong> {{book[0].isbn}}</div>
+      <div><strong>Author: </strong> {{book[0].author}}</div>
+      <div><strong>Published Date:</strong>{{book[0].year}}</div>
+      <div>
+        <strong>Categories: </strong>{% for i in categ %}
+        <span>{{i}},</span>
+        {% endfor %}
+      </div>
+      <div><strong>Description: </strong>{{book[1].description}}</div>
+      <div><strong>Page Counts: </strong>{{book[1].pageCount}}</div>
+      <div><strong>Rating: </strong>{{book[1].averageRating}}</div>
+      {% for i in range (val) %}
+      <span>&#11088;</span>
+      {% endfor %}
+      <div><strong>Rating Counts: </strong>{{book[1].ratingsCount + rc}}</div>
+    </div>
+  </div>
+  <div class="row mt-4">
+    <div class="col-md-6 col-12">
+      <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        <fieldset class="form-group">
+          <legend class="border-bottom m-4 p-5">
+            <img src="../static/img/review.svg" height="280px" alt="" />
+          </legend>
+          <div class="form-group">
+            {{ form.rating.label(class="form-control-label") }} {% if
+            form.rating.errors %} {{ form.rating(class="form-control
+            form-control-lg is-invalid") }}
+            <div class="invalid-feedback">
+              {% for error in form.rating.errors %}
+              <span>{{ error }}</span>
+              {% endfor %}
+            </div>
+            {% else %} {{ form.rating(class="form-control form-control-lg") }}
+            {% endif %}
+          </div>
+          <div class="form-group">
+            {{ form.content.label(class="form-control-label") }} {% if
+            form.content.errors %} {{ form.content(class="form-control
+            form-control-lg is-invalid") }}
+            <div class="invalid-feedback">
+              {% for error in form.content.errors %}
+              <span>{{ error }}</span>
+              {% endfor %}
+            </div>
+            {% else %} {{ form.content(class="form-control form-control-lg") }}
+            {% endif %}
+          </div>
+        </fieldset>
+        <div class="form-group">{{ form.submit(class="btn btn-success") }}</div>
+      </form>
+    </div>
+    <div class="col-md-5 offset-md-1 mt-5 pt-5">
+      {% for reviews in all_reviews %}
+
+      <div class="card border-success mb-3" style="max-width: 18rem">
+        <div class="card-header">
+          <h5>User name: {{ reviews.name }}</h5>
+          <p>Date:{{ reviews.date }}</p>
+        </div>
+        <div class="card-body text-success">
+          <h5 class="card-title">
+            <div scope="row">
+              Rating:&nbsp;{{ reviews.rating }}&nbsp; &#11088;
+            </div>
+          </h5>
+          <p class="card-text">{{ reviews.comment }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div> -->
+</main>
+{%endblock%}
