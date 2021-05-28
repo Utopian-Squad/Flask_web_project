@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login Page</title>
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+<body>
+    
+
+    <div class="login" >
+    
+        <form name='form-login' id="loginForm">
+        <img id="img1" src="./assets/images/pic.png" height="100px" width="auto">
+            <h1 id="lableLog">Login</h1>
+    
+            <label for="userName">Email</label>
+            <input type="email" id="userName" placeholder="Username" required>
+    
+            <label for="userPw">Password</label>
+            <input type="password" id="userPw" placeholder="Password" required>
+    
+            <div id="remember">
+                <input type="checkbox" value="lsRememberMe" id="rememberMe" style="display: inline-block;">
+                <label>Remember me</label>
+            </div>
+    
+            <input id="login_btn" type="submit" value="Login" onclick="check()">
+        <a href="./sign in.html">Sign up</a>
+        
+        </form>
+   
+   
+</div>
+
+<script src="./assets/js/script.js"></script>
+
+</body>
+</html>

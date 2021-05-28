@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>AppIN</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Create Account</h2>
+        
+
+        <!-- Button to Open the Modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal1">
+            Create Account
+        </button>
+
+        <!-- The Modal 1-->
+        <div class="modal fade" id="modal1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header" style="border: none;">
+                        <h6 class="modal-title mt-5 text-muted"
+                            style="position: absolute;top: -10px;right: 15px;font-size: 18px;">Step 1 of 3</h6>
+
+                        <nav class="navbar navbar-dark primary-color">
+                            <a class="navbar-brand" href="#">
+                                <img src="./assets/images/logo.png" height="70" alt="AppIn logo">
+                            </a>
+                            <h4 class="modal-title mt-5" style="font-weight: bolder;">Create Account</h4>
+
+                        </nav>
+
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="container">
+                            <form action="/action_page.php">
+                                <div class="form-group">
+                                    <label for="email" style="color: #308EFC;">Email:</label>
+                                    <i class="fa fa-envelope emailIcon" style="color: #308EFC;"> </i>
+                                    <input type="text" class="form-control" id="email" placeholder="Enter email"
+                                        name="email"
+                                        style="border-top: none;border-left: none;border-right: none;border-bottom: solid 1px black;width: 95%;">
+                                </div>
+                                <div class="form-group">
+                                    <label for="pwd" style="color: #308EFC;">Password:</label>
+                                    <i class="fa fa-lock passIcon" aria-hidden="true" style="color: #308EFC;"></i>
+                                    <input type="password" class="form-control" id="pwd" placeholder="Enter password"
+                                        name="pswd"
+                                        style="border-top: none;border-left: none;border-right: none;border-bottom: solid 1px black;width: 95%;">
+                                </div>
+                                <div class="form-group">
+                                    <label for="pwd" style="color: #308EFC;">Repeat password:</label>
+                                    <i class="fa fa-lock passIcon2" aria-hidden="true" style="color: #308EFC;"></i>
+                                    <input type="password" class="form-control" id="pwd" placeholder="Repeat password"
+                                        name="pswd"
+                                        style="border-top: none;border-left: none;border-right: none;border-bottom: solid 1px black;width: 95%;">
+                                </div>
+                                <div class="form-group form-check ml-3 p-3">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="checkbox" name="remember"> I agree for
+                                        processing my personal data
+                                    </label>
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="checkbox" name="remember"> I've read
+                                        Privacy Policy, Terms of Service
+                                    </label>
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="checkbox" name="remember"> I want to
+                                        receive email message from AppIn
+                                    </label>
+                                </div>
+                                <button type="button" class="btn btn-outline-dark ml-5 p-3" data-toggle="modal"
+                                    id="btnModal2" data-target="#modal2" style="width: 50%;border-radius: 10px;" onclick="$('#modal1').modal('hide')">Next
+                                    Step</button>
+                            </form>
+                        </div>
+
+
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <p class="ml-auto cya" style="font-weight: bold;float: left;width: 50%;">Create your account
+                            with: </p>
+
+                        <div>
+
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24"
+                            viewBox="0 0 172 172" style=" fill:#000000;margin-left:-10dp">
+                            <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                                stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                                font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                                style="mix-blend-mode: normal">
+                                <path d="M0,172v-172h172v172z" fill="none"></path>
+                                <g fill="#308efc">
+                                    <path
+                                        d="M156.23893,0h-140.47786c-8.5944,0 -15.76107,7.16667 -15.76107,15.76107v140.47786c0,8.5944 7.16667,15.76107 15.76107,15.76107h140.47786c8.5944,0 15.76107,-7.16667 15.76107,-15.76107v-140.47786c0,-8.5944 -7.16667,-15.76107 -15.76107,-15.76107zM50.16667,143.33333h-28.66667v-78.83333h28.66667zM35.83333,55.17774c-8.5944,0 -14.33333,-5.73893 -14.33333,-12.9056c0,-7.86654 5.73893,-13.60547 14.33333,-13.60547c8.5944,0 14.33333,5.73893 14.33333,12.9056c0,7.86654 -5.73893,13.60547 -14.33333,13.60547zM150.5,143.33333h-28.66667v-43c0,-11.47786 -7.89453,-14.33333 -10.02213,-14.33333c-2.1556,0 -11.47787,1.42774 -11.47787,14.33333c0,1.42774 0,43 0,43h-28.66667v-78.83333h28.66667v11.47787c4.3112,-6.4668 11.47787,-11.47787 25.08333,-11.47787c13.60547,0 25.08333,10.75 25.08333,35.83333z">
+                                    </path>
+                                </g>
+                            </g>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="26" height="26"
+                            viewBox="0 0 172 172" style=" fill:#000000;">
+                            <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                                stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                                font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                                style="mix-blend-mode: normal">
+                                <path d="M0,172v-172h172v172z" fill="none"></path>
+                                <g fill="#308efc">
+                                    <path
+                                        d="M86,0c-47.49846,0 -86,38.50154 -86,86c0,43.11908 31.76046,78.71646 73.14631,84.93492v-62.14492h-21.28169v-22.60477h21.28169v-15.04338c0,-24.90692 12.13262,-35.83554 32.83215,-35.83554c9.90985,0 15.15585,0.73431 17.63662,1.07169v19.73369h-14.11723c-8.78523,0 -11.85477,8.32877 -11.85477,17.72262v12.35754h25.75369l-3.49292,22.60477h-22.26077v62.33015c41.97462,-5.70246 74.35692,-41.59092 74.35692,-85.12677c0,-47.49846 -38.50154,-86 -86,-86z">
+                                    </path>
+                                </g>
+                            </g>
+                        </svg>
+
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+         <!-- The Modal 2-->
+ <div class="modal fade" id="modal2" >
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header" style="border: none;">
+                <h6 class="modal-title mt-5 text-muted"
+                    style="position: absolute;top: -10px;right: 15px;font-size: 18px;">Step 2 of 3</h6>
+
+                <nav class="navbar navbar-dark primary-color">
+                    <a class="navbar-brand" href="#">
+                        <img src="./assets/images/logo.png" height="70" alt="AppIn logo">
+                    </a>
+                    <h4 class="modal-title mt-5" style="font-weight: bolder;">Create Account</h4>
+
+                </nav>
+
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="container">
+                    <form action="/action_page.php">
+                        <div class="form-group">
+                            <label for="firstName" style="color: #308EFC;">First Name:</label>
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="user" width="24"
+                                height="24" viewBox="0 0 172 172" style=" fill:#000000;position: absolute">
+                                <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1"
+                                    stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+                                    stroke-dasharray="" stroke-dashoffset="0" font-family="none"
+                                    font-weight="none" font-size="none" text-anchor="none"
+                                    style="mix-blend-mode: normal">
+                                    <path d="M0,172v-172h172v172z" fill="none"></path>
+                                    <g fill="#308efc">
+                                        <path
+                                            d="M86,0c-31.66211,0 -57.33333,25.67122 -57.33333,57.33333c0,31.66211 25.67122,57.33333 57.33333,57.33333c31.66211,0 57.33333,-25.67122 57.33333,-57.33333c0,-31.66211 -25.67122,-57.33333 -57.33333,-57.33333zM47.70313,76.36979h76.59375c-7.05469,14.10938 -21.44401,23.96354 -38.29687,23.96354c-16.85286,0 -31.24219,-9.85417 -38.29687,-23.96354zM52.85417,124.52083c-21.33203,5.59896 -38.01692,18.92448 -45.6875,47.47917h157.66667c-7.67057,-28.55469 -24.35547,-41.88021 -45.6875,-47.47917c-9.88216,5.29101 -21.16406,8.28646 -33.14583,8.28646c-11.98177,0 -23.26367,-2.99544 -33.14583,-8.28646z">
+                                        </path>
+                                    </g>
+                                </g>
+                            </svg> <input type="text" class="form-control" id="firstName"
+                                placeholder="Enter your first name" name="firstName"
+                                style="border-top: none;border-left: none;border-right: none;border-bottom: solid 1px black;width: 95%;">
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName" style="color: #308EFC;">last Name:</label>
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="user" width="24"
+                                height="24" viewBox="0 0 172 172" style=" fill:#000000;position: absolute">
+                                <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1"
+                                    stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+                                    stroke-dasharray="" stroke-dashoffset="0" font-family="none"
+                                    font-weight="none" font-size="none" text-anchor="none"
+                                    style="mix-blend-mode: normal">
+                                    <path d="M0,172v-172h172v172z" fill="none"></path>
+                                    <g fill="#308efc">
+                                        <path
+                                            d="M86,0c-31.66211,0 -57.33333,25.67122 -57.33333,57.33333c0,31.66211 25.67122,57.33333 57.33333,57.33333c31.66211,0 57.33333,-25.67122 57.33333,-57.33333c0,-31.66211 -25.67122,-57.33333 -57.33333,-57.33333zM47.70313,76.36979h76.59375c-7.05469,14.10938 -21.44401,23.96354 -38.29687,23.96354c-16.85286,0 -31.24219,-9.85417 -38.29687,-23.96354zM52.85417,124.52083c-21.33203,5.59896 -38.01692,18.92448 -45.6875,47.47917h157.66667c-7.67057,-28.55469 -24.35547,-41.88021 -45.6875,-47.47917c-9.88216,5.29101 -21.16406,8.28646 -33.14583,8.28646c-11.98177,0 -23.26367,-2.99544 -33.14583,-8.28646z">
+                                        </path>
+                                    </g>
+                                </g>
+                            </svg>
+
+                            <input type="text" class="form-control" id="lastName"
+                                placeholder="Enter your last name" name="lastName"
+                                style="border-top: none;border-left: none;border-right: none;border-bottom: solid 1px black;width: 95%;">
+                        </div>
+                        <label for="gender" style="color: #308EFC;">Gender:</label>
+                        <div class="form-check" style="margin-left: 15%;margin-top: -7%;">
+
+                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Male
+                            </label>
+                        </div>
+
+                        <div class="form-check" style="margin-left: 15%;">
+
+                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                id="flexRadioDefault2" checked>
+                            <label class="form-check-label" for="flexRadioDefault2">
+                                Female
+                            </label>
+                        </div>
+                        <div class="form-group mt-3">
+                            <label for="dateOfBirth" style="color: #308EFC;">Date of Birth:</label>
+
+                            <input type="date" class="form-control" id="DOB"
+                                placeholder="Enter your date of birth" name="DOB"
+                                style="border-top: none;border-left: none;border-right: none;border-bottom: solid 1px black;width: 95%;">
+                        </div>
+                        <div class="form-group">
+                            <label for="phoneNumber" style="color: #308EFC;">Phone:</label>
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="phone" width="24"
+                                height="24" viewBox="0 0 172 172" style=" fill:#000000;">
+                                <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1"
+                                    stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+                                    stroke-dasharray="" stroke-dashoffset="0" font-family="none"
+                                    font-weight="none" font-size="none" text-anchor="none"
+                                    style="mix-blend-mode: normal">
+                                    <path d="M0,172v-172h172v172z" fill="none"></path>
+                                    <g fill="#308efc">
+                                        <path
+                                            d="M57.33333,17.18881c0.72787,0 0.72787,0 1.42774,0.72786c0.72786,0.72787 2.88347,2.85547 2.88347,4.3112c0,1.42773 0,5.01106 0.69987,7.86653c1.42774,3.58333 2.88347,12.9056 5.01107,17.91667c2.1556,5.01107 2.88346,7.89453 0.72786,10.75c-2.1556,3.58333 -15.76107,17.2168 -15.76107,17.2168c0,0 3.58333,7.16667 7.86654,11.44987c3.58333,5.01107 9.32226,12.17774 16.48893,17.91667c7.16667,6.4668 15.06119,12.17774 22.92774,15.76107c7.89453,-7.86654 14.33333,-14.33333 16.48893,-15.76107c2.1556,-1.42774 2.1556,-2.1556 5.73893,-0.69987c3.58333,1.42773 8.5944,3.58333 14.33333,4.2832c5.01107,0.72786 10.75,1.42774 14.33333,2.1556c3.58333,0.72787 3.58333,0.72787 4.3112,2.1556c1.42773,1.42774 2.1276,3.58333 2.1276,4.28321c0,0.72786 0,2.88346 0,10.05012c0,7.16667 0,17.18881 0,19.3444c0,2.1556 0,2.1556 -0.69988,3.58333c-0.72786,1.42774 -1.42773,5.01107 -1.42773,5.01107c0,0.72786 -3.58333,2.1556 -5.73894,2.1556c-2.1556,0 -10.05012,0 -15.06119,-0.72786c-5.01107,-0.69988 -18.61653,-3.58333 -23.6556,-5.71094c-5.01107,-1.45573 -21.5,-7.16667 -41.54427,-22.22787c-18.64453,-14.33333 -32.25,-33.67774 -40.14453,-49.4388c-7.89453,-15.78906 -12.17774,-32.97787 -12.9056,-41.57227c-1.42774,-8.5944 -1.42774,-12.17773 -1.42774,-14.33333c0.72787,-2.1556 2.85547,-4.31119 4.3112,-5.01106c1.42773,-0.72787 3.58333,-1.45573 5.71094,-1.45573c2.1556,0 7.89453,0 15.78906,0c7.86653,0 17.1888,0 17.1888,0z">
+                                        </path>
+                                    </g>
+                                </g>
+                            </svg>
+
+                            <input type="tel" class="form-control" id="phoneNumber"
+                                placeholder="Enter your phone number" name="phoneNumber"
+                                style="border-top: none;border-left: none;border-right: none;border-bottom: solid 1px black;width: 95%;">
+                        </div>
+                        <button type="button" class="btn btn-outline-dark ml-5 p-3"
+                            style="width: 50%;border-radius: 10px;" data-toggle="modal" id="btnModal2"
+                            data-target="#modal3" onclick="$('#modal2').modal('hide')">Next Step</button>
+                    </form>
+                </div>
+
+
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <p class="ml-auto cya" style="font-weight: bold;float: left;width: 50%;">Create your account
+                    with: </p>
+
+                <div>
+
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24"
+                    viewBox="0 0 172 172" style=" fill:#000000;margin-left:-10dp">
+                    <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                        stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                        font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                        style="mix-blend-mode: normal">
+                        <path d="M0,172v-172h172v172z" fill="none"></path>
+                        <g fill="#308efc">
+                            <path
+                                d="M156.23893,0h-140.47786c-8.5944,0 -15.76107,7.16667 -15.76107,15.76107v140.47786c0,8.5944 7.16667,15.76107 15.76107,15.76107h140.47786c8.5944,0 15.76107,-7.16667 15.76107,-15.76107v-140.47786c0,-8.5944 -7.16667,-15.76107 -15.76107,-15.76107zM50.16667,143.33333h-28.66667v-78.83333h28.66667zM35.83333,55.17774c-8.5944,0 -14.33333,-5.73893 -14.33333,-12.9056c0,-7.86654 5.73893,-13.60547 14.33333,-13.60547c8.5944,0 14.33333,5.73893 14.33333,12.9056c0,7.86654 -5.73893,13.60547 -14.33333,13.60547zM150.5,143.33333h-28.66667v-43c0,-11.47786 -7.89453,-14.33333 -10.02213,-14.33333c-2.1556,0 -11.47787,1.42774 -11.47787,14.33333c0,1.42774 0,43 0,43h-28.66667v-78.83333h28.66667v11.47787c4.3112,-6.4668 11.47787,-11.47787 25.08333,-11.47787c13.60547,0 25.08333,10.75 25.08333,35.83333z">
+                            </path>
+                        </g>
+                    </g>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="26" height="26"
+                    viewBox="0 0 172 172" style=" fill:#000000;">
+                    <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                        stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                        font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                        style="mix-blend-mode: normal">
+                        <path d="M0,172v-172h172v172z" fill="none"></path>
+                        <g fill="#308efc">
+                            <path
+                                d="M86,0c-47.49846,0 -86,38.50154 -86,86c0,43.11908 31.76046,78.71646 73.14631,84.93492v-62.14492h-21.28169v-22.60477h21.28169v-15.04338c0,-24.90692 12.13262,-35.83554 32.83215,-35.83554c9.90985,0 15.15585,0.73431 17.63662,1.07169v19.73369h-14.11723c-8.78523,0 -11.85477,8.32877 -11.85477,17.72262v12.35754h25.75369l-3.49292,22.60477h-22.26077v62.33015c41.97462,-5.70246 74.35692,-41.59092 74.35692,-85.12677c0,-47.49846 -38.50154,-86 -86,-86z">
+                            </path>
+                        </g>
+                    </g>
+                </svg>
+
+
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+        <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal2">
+    Open modal
+  </button> -->
+
+<!-- Modal 3 -->
+
+<div class="modal fade" id="modal3" >
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header" style="border: none;">
+                <h6 class="modal-title mt-5 text-muted"
+                    style="position: absolute;top: -10px;right: 15px;font-size: 18px;">Step 3 of 3</h6>
+
+                <nav class="navbar navbar-dark primary-color">
+                    <a class="navbar-brand" href="#">
+                        <img src="./assets/images/logo.png" height="70" alt="AppIn logo">
+                    </a>
+                    <h4 class="modal-title mt-5" style="font-weight: bolder;">Create Account</h4>
+
+                </nav>
+
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="container">
+                    <form action="/action_page.php">
+                        <div class="form-group">
+                            <label for="education" style="color: #308EFC;">Level of Education:</label>
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="education" width="26"
+                                height="26" viewBox="0 0 172 172" style=" fill:#000000;">
+                                <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1"
+                                    stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+                                    stroke-dasharray="" stroke-dashoffset="0" font-family="none"
+                                    font-weight="none" font-size="none" text-anchor="none"
+                                    style="mix-blend-mode: normal">
+                                    <path d="M0,172v-172h172v172z" fill="none"></path>
+                                    <g fill="#3498db">
+                                        <path
+                                            d="M86,0l-86,39.69231v6.61538h13.23077c0,3.64363 2.94592,6.61538 6.61538,6.61538h132.30769c3.66947,0 6.61538,-2.97176 6.61538,-6.61538h13.23077v-6.61538zM26.46154,59.53846v79.38462h-6.61538c-3.66947,0 -6.61538,2.97176 -6.61538,6.61538v6.61538h145.53846v-6.61538c0,-3.64363 -2.94591,-6.61538 -6.61538,-6.61538h-6.61538v-79.38462h-19.84615v79.38462h-13.23077v-79.38462h-19.84615v79.38462h-13.23077v-79.38462h-19.84615v79.38462h-13.23077v-79.38462zM6.61538,158.76923c-3.66947,0 -6.61538,2.97176 -6.61538,6.61538v6.61538h172v-6.61538c0,-3.64363 -2.94591,-6.61538 -6.61538,-6.61538z">
+                                        </path>
+                                    </g>
+                                </g>
+                            </svg>
+                            <input type="text" class="form-control" id="education"
+                                placeholder="Enter your level of education" name="education"
+                                style="border-top: none;border-left: none;border-right: none;border-bottom: solid 1px black;width: 95%;">
+                        </div>
+                        <div class="form-group">
+                            <label for="citizenship" style="color: #308EFC;">Citizenship:</label>
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="citizenship"
+                                width="24" height="24" viewBox="0 0 172 172" style=" fill:#000000;">
+                                <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1"
+                                    stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+                                    stroke-dasharray="" stroke-dashoffset="0" font-family="none"
+                                    font-weight="none" font-size="none" text-anchor="none"
+                                    style="mix-blend-mode: normal">
+                                    <path d="M0,172v-172h172v172z" fill="none"></path>
+                                    <g fill="#3498db">
+                                        <path
+                                            d="M156.18317,157.66667l-48.68317,7.16667h-60.91667l-23.59983,-7.16667c-5.26033,0 -8.87233,1.61967 -6.493,-3.0745c6.192,-12.22633 8.0625,-22.7685 19.0705,-30.75933c14.15417,-10.26983 31.5835,-16.33283 50.439,-16.33283c12.57033,0 24.51,2.69467 35.26,7.53217c17.92383,8.06967 25.40583,22.09483 34.2495,39.56c2.37933,4.69417 5.934,3.0745 0.67367,3.0745z"
+                                            opacity="0.35"></path>
+                                        <circle cx="12" cy="3.5" transform="scale(7.16667,7.16667)" r="2.5"
+                                            opacity="0.35"></circle>
+                                        <path
+                                            d="M57.33333,71.66667v25.08333c0,5.934 4.816,10.75 10.75,10.75h35.83333c5.934,0 10.75,-4.816 10.75,-10.75v-25.08333c0,-11.87517 -9.62483,-21.5 -21.5,-21.5h-14.33333c-11.87517,0 -21.5,9.62483 -21.5,21.5z">
+                                        </path>
+                                        <path
+                                            d="M94.26317,143.33333h-16.52633c-3.5045,0 -6.493,-2.52983 -7.06633,-5.99133l-6.1705,-37.00867h43l-6.1705,37.00867c-0.57333,3.4615 -3.56183,5.99133 -7.06633,5.99133z">
+                                        </path>
+                                        <path
+                                            d="M57.33333,154.08333c0,5.94833 -4.80167,10.75 -10.75,10.75h-30.745c-5.30333,0 -8.88667,-5.51833 -6.52167,-10.24833c6.235,-12.32667 15.40833,-22.86167 26.51667,-30.88833v12.54167c0,3.94167 3.15333,7.095 7.095,7.095h3.655c5.94833,0 10.75,4.80167 10.75,10.75z">
+                                        </path>
+                                        <path
+                                            d="M156.16167,164.83333h-48.66167v0c0,-7.88333 6.45,-14.33333 14.33333,-14.33333h14.33333c3.94167,0 7.16667,-3.225 7.16667,-7.16667c0,-3.94167 -3.225,-7.16667 -7.16667,-7.16667h-7.16667c-3.94167,0 -7.16667,-3.225 -7.16667,-7.16667v-13.68833c17.63,8.09833 32.0995,21.9945 40.84283,39.26617c2.3865,4.70133 -1.247,10.2555 -6.5145,10.2555z">
+                                        </path>
+                                    </g>
+                                </g>
+                            </svg>
+
+                            <input type="text" class="form-control" id="lastName"
+                                placeholder="Enter your citizenship" name="citizenship"
+                                style="border-top: none;border-left: none;border-right: none;border-bottom: solid 1px black;width: 95%;">
+                        </div>
+                        <div class="form-group">
+                            <label for="address" style="color: #308EFC;">Address:</label>
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="address" width="24"
+                                height="24" viewBox="0 0 172 172" style=" fill:#000000;">
+                                <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1"
+                                    stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+                                    stroke-dasharray="" stroke-dashoffset="0" font-family="none"
+                                    font-weight="none" font-size="none" text-anchor="none"
+                                    style="mix-blend-mode: normal">
+                                    <path d="M0,172v-172h172v172z" fill="none"></path>
+                                    <g fill="#3498db">
+                                        <path
+                                            d="M86,7.16667c-23.75033,0 -43,19.24967 -43,43c0,20.339 18.84979,48.31542 31.59212,64.89193c5.77633,7.51783 17.04659,7.51783 22.81576,0c12.74233,-16.57651 31.59212,-44.55293 31.59212,-64.89193c0,-23.75033 -19.24967,-43 -43,-43zM86,34.81152c8.48533,0 15.35514,6.86981 15.35514,15.35514c0,8.47817 -6.87698,15.35514 -15.35514,15.35514c-8.47817,0 -15.35514,-6.86981 -15.35514,-15.35514c0,-8.48533 6.86981,-15.35514 15.35514,-15.35514zM44.10579,107.5c-5.86233,0 -11.13286,3.57482 -13.31152,9.01432l-8.5944,21.5c-3.7625,9.41701 3.15669,19.65235 13.29753,19.65235h101.00521c10.14083,0 17.06003,-10.23534 13.29753,-19.65235l-8.5944,-21.5c-2.17867,-5.4395 -7.44919,-9.01432 -13.31152,-9.01432h-6.06087c-3.956,0 -7.16667,3.21067 -7.16667,7.16667c0,3.956 3.21067,7.16667 7.16667,7.16667h6.07487l6.63477,16.58691c0.93883,2.35783 -0.79438,4.91309 -3.33138,4.91309h-90.42318c-2.537,0 -4.26338,-2.55525 -3.31738,-4.91309l6.62077,-16.58691h6.07487c3.956,0 7.16667,-3.21067 7.16667,-7.16667c0,-3.956 -3.21067,-7.16667 -7.16667,-7.16667z">
+                                        </path>
+                                    </g>
+                                </g>
+                            </svg>
+                            <input type="text" class="form-control" id="eaddress"
+                                placeholder="Enter your address" name="address"
+                                style="border-top: none;border-left: none;border-right: none;border-bottom: solid 1px black;width: 95%;">
+                        </div>
+                        <div class="form-group">
+                            <label for="skill" style="color: #308EFC;">Skill:</label>
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="skill" width="24"
+                                height="24" viewBox="0 0 172 172" style=" fill:#000000;">
+                                <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1"
+                                    stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+                                    stroke-dasharray="" stroke-dashoffset="0" font-family="none"
+                                    font-weight="none" font-size="none" text-anchor="none"
+                                    style="mix-blend-mode: normal">
+                                    <path d="M0,172v-172h172v172z" fill="none"></path>
+                                    <g fill="#3498db">
+                                        <path
+                                            d="M100.33333,14.33333c-7.88333,0 -14.33333,6.45 -14.33333,14.33333v64.5l21.5,-21.5h35.83333c7.88333,0 14.33333,-6.45 14.33333,-14.33333v-28.66667c0,-7.88333 -6.45,-14.33333 -14.33333,-14.33333zM71.66667,16.33496c-22.71117,5.87667 -40.0134,25.15422 -42.62207,49.00488l-13.57747,21.29004c-2.18583,3.4185 -0.75239,7.97672 2.98145,9.54622l10.2181,4.31119v21.34603c0,7.91917 6.41417,14.33333 14.33333,14.33333h14.33333v21.5h64.5v-19.77832c0,-28.98917 15.14362,-30.77534 19.98828,-51.88834h-28.38672l-17.30078,17.30078c-9.02999,9.03 -24.46744,2.63689 -24.46744,-10.13411v-50.16667v-14.33333zM100.33333,28.66667h43v28.66667h-43z">
+                                        </path>
+                                    </g>
+                                </g>
+                            </svg>
+                            <input type="text" class="form-control" id="lastName" placeholder="Enter your skill"
+                                name="skill"
+                                style="border-top: none;border-left: none;border-right: none;border-bottom: solid 1px black;width: 95%;">
+                        </div>
+                        <div class="form-group">
+                            <label for="work" style="color: #308EFC;">Work:</label>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="work" width="50"
+                                height="50" viewBox="0 0 172 172" style=" fill:#000000;">
+                                <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1"
+                                    stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+                                    stroke-dasharray="" stroke-dashoffset="0" font-family="none"
+                                    font-weight="none" font-size="none" text-anchor="none"
+                                    style="mix-blend-mode: normal">
+                                    <path d="M0,172v-172h172v172z" fill="none"></path>
+                                    <g fill="#3498db">
+                                        <path
+                                            d="M86,6.88c-2.71437,0 -5.02562,1.57219 -6.15437,3.84313c-4.35375,1.22281 -7.60563,5.20031 -7.60563,9.91687v8.385c-6.04687,4.38063 -10.32,11.12625 -10.32,19.135c0,13.26281 10.81719,24.08 24.08,24.08c13.26281,0 24.08,-10.81719 24.08,-24.08c0,-8.00875 -4.27312,-14.75437 -10.32,-19.135v-8.385c0,-4.71656 -3.25187,-8.69406 -7.60562,-9.91687c-1.12875,-2.27094 -3.44,-3.84313 -6.15438,-3.84313zM82.56,17.2h6.88c1.94844,0 3.44,1.49156 3.44,3.44v11.63688l1.72,0.99437c5.13313,2.98313 8.6,8.50594 8.6,14.88875c0,9.54063 -7.65937,17.2 -17.2,17.2c-9.54062,0 -17.2,-7.65937 -17.2,-17.2c0,-5.65719 2.72781,-10.62906 6.92031,-13.76h10.27969v-6.88h-6.88v-6.88c0,-1.94844 1.49156,-3.44 3.44,-3.44zM44.72,20.64c-1.89469,0 -3.44,1.54531 -3.44,3.44c0,1.89469 1.54531,3.44 3.44,3.44c1.89469,0 3.44,-1.54531 3.44,-3.44c0,-1.89469 -1.54531,-3.44 -3.44,-3.44zM127.28,20.64c-1.89469,0 -3.44,1.54531 -3.44,3.44c0,1.89469 1.54531,3.44 3.44,3.44c1.89469,0 3.44,-1.54531 3.44,-3.44c0,-1.89469 -1.54531,-3.44 -3.44,-3.44zM55.04,27.52c-1.89469,0 -3.44,1.54531 -3.44,3.44c0,1.89469 1.54531,3.44 3.44,3.44c1.89469,0 3.44,-1.54531 3.44,-3.44c0,-1.89469 -1.54531,-3.44 -3.44,-3.44zM116.96,27.52c-1.89469,0 -3.44,1.54531 -3.44,3.44c0,1.89469 1.54531,3.44 3.44,3.44c1.89469,0 3.44,-1.54531 3.44,-3.44c0,-1.89469 -1.54531,-3.44 -3.44,-3.44zM37.84,44.72c-1.89469,0 -3.44,1.54531 -3.44,3.44c0,1.89469 1.54531,3.44 3.44,3.44c1.89469,0 3.44,-1.54531 3.44,-3.44c0,-1.89469 -1.54531,-3.44 -3.44,-3.44zM51.6,44.72c-1.89469,0 -3.44,1.54531 -3.44,3.44c0,1.89469 1.54531,3.44 3.44,3.44c1.89469,0 3.44,-1.54531 3.44,-3.44c0,-1.89469 -1.54531,-3.44 -3.44,-3.44zM120.4,44.72c-1.89469,0 -3.44,1.54531 -3.44,3.44c0,1.89469 1.54531,3.44 3.44,3.44c1.89469,0 3.44,-1.54531 3.44,-3.44c0,-1.89469 -1.54531,-3.44 -3.44,-3.44zM134.16,44.72c-1.89469,0 -3.44,1.54531 -3.44,3.44c0,1.89469 1.54531,3.44 3.44,3.44c1.89469,0 3.44,-1.54531 3.44,-3.44c0,-1.89469 -1.54531,-3.44 -3.44,-3.44zM55.04,61.92c-1.89469,0 -3.44,1.54531 -3.44,3.44c0,1.89469 1.54531,3.44 3.44,3.44c1.89469,0 3.44,-1.54531 3.44,-3.44c0,-1.89469 -1.54531,-3.44 -3.44,-3.44zM116.96,61.92c-1.89469,0 -3.44,1.54531 -3.44,3.44c0,1.89469 1.54531,3.44 3.44,3.44c1.89469,0 3.44,-1.54531 3.44,-3.44c0,-1.89469 -1.54531,-3.44 -3.44,-3.44zM44.72,68.8c-1.89469,0 -3.44,1.54531 -3.44,3.44c0,1.89469 1.54531,3.44 3.44,3.44c1.89469,0 3.44,-1.54531 3.44,-3.44c0,-1.89469 -1.54531,-3.44 -3.44,-3.44zM127.28,68.8c-1.89469,0 -3.44,1.54531 -3.44,3.44c0,1.89469 1.54531,3.44 3.44,3.44c1.89469,0 3.44,-1.54531 3.44,-3.44c0,-1.89469 -1.54531,-3.44 -3.44,-3.44zM133.78375,92.88c-19.00062,0 -30.58375,15.39938 -30.58375,34.4c0,19.00063 11.58313,34.4 30.58375,34.4c24.45625,0 31.33625,-20.64 31.33625,-20.64h-27.52l-10.32,-13.76l10.32,-13.76h27.52c0,0 -6.88,-20.64 -31.33625,-20.64zM24.08,110.08c-9.50031,0 -17.2,7.69969 -17.2,17.2c0,9.50031 7.69969,17.2 17.2,17.2h75.31719c-1.97531,-5.16 -3.07719,-10.95156 -3.07719,-17.2c0,-6.24844 1.10188,-12.04 3.07719,-17.2zM24.08,120.4c3.80281,0 6.88,3.07719 6.88,6.88c0,3.80281 -3.07719,6.88 -6.88,6.88c-3.80281,0 -6.88,-3.07719 -6.88,-6.88c0,-3.80281 3.07719,-6.88 6.88,-6.88z">
+                                        </path>
+                                    </g>
+                                </g>
+                            </svg>
+                            <input type="text" class="form-control" id="work" placeholder="Enter your work"
+                                name="work"
+                                style="border-top: none;border-left: none;border-right: none;border-bottom: solid 1px black;width: 95%;">
+                        </div>
+                        <button type="submit" class="btn btn-outline-dark ml-5 p-3"
+                            style="width: 50%;border-radius: 10px;">Finish</button>
+                    </form>
+                </div>
+
+
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <p class="ml-auto" style="font-weight: bold;width: 50%;text-align: center;margin-right:25% ;">
+                    Thank you </p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+       
+    </div>
+
+    <script>
+        var modalBtn1 = document.querySelector("#btnModal1")
+        var modalBtn2 = document.querySelector("#btnModal2")
+        var modal1 = document.querySelector("#modal1")
+        var modal2 = document.querySelector("#modal2")
+
+        modalBtn1.addEventListener("click", () => {
+            modal1.style = "display:none"
+        });
+
+        modalBtn2.addEventListener("click", () => {
+            modal2.style = "display:none"
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>user profile with application notification</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- <link
+      href="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+      rel="stylesheet"
+    /> -->
+    <!-- add style css  -->
+    <link href="assets/css/pro_styles.css" rel="stylesheet" />
+    <link href="assets/css/pro_checkout.css" rel="stylesheet" />
+    <!-- <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    /> -->
+
+    <!-- navbar start -->
+    <!-- <link rel="stylesheet" href="./assets/css/pro_nav.css" /> -->
+    <link rel="stylesheet" href="./assets/css/style_index.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-light sticky-top"
+      id="navbar-custom"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html"
+          ><img class="logo_img" src="./assets/images/logo.png" alt="logo"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link linksNav" href="index.html"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link linksNav" href="organizations.html"
+                >Organizations</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link linksNav" href="universities.html"
+                >Universities</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link linksNav" href="about.html">About</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 mr-lg-0">
+            <!-- <div class="searchbar">
+             <input
+               class="search_input"
+               type="text"
+               name=""
+               placeholder="Search..."
+             />
+             <a href="#" class="search_icon"><i class="fa fa-search"></i></a>
+           </div> -->
+            <div class="p-md-2 p-sm-5">
+              <a href="pro_index.html"
+                ><i class="fa fa-user-circle fa-lg" aria-hidden="true"></i>
+              </a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- nav bar end -->
+
+    <!-- BEGIN USER PROFILE -->
+    <div class="container bootstrap snippets bootdey">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="grid profile">
+            <div class="grid-header">
+              <div class="col-xs-2">
+                <img
+                  src="assets/images/pic.png"
+                  class="img-circle"
+                  alt="logo"
+               style="width: 12%;" />
+              </div>
+              <div class="col-xs-7">
+                <div class="showContent">
+                  <h3 class="fullName"></h3>
+                  <p class="showWork">Rediet Mengiste</p>
+                  <p>5kilo, Addis Abeba, Ethiopia</p>
+                </div>
+              </div>
+            </div>
+            <div class="grid-body">
+              <ul class="nav nav-tabs" id="lists">
+                <li class="nav-item ">
+                  <a class="nav-link active" href="#profile" data-toggle="tab">Profile</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#application" data-toggle="tab">Edit Profile</a>
+                </li>
+                <!-- <li class=""><a href="#organization" data-toggle="tab">Details</a></li>  -->
+                <!-- <li class=""><a href="#notification" data-toggle="tab">Privacy Setting</a></li> -->
+              </ul>
+              <div class="tab-content">
+                <!-- BEGIN PROFILE -->
+                <div class="tab-pane active" id="profile">
+                  <br />
+                  <p class="lead"><strong>Profile</strong></p>
+                  <hr />
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="showContent">
+                        <p class="showEmail">
+                          <strong>Email:</strong>
+                          <a href="soengsouy.com"
+                            >se.rediet.mengiste@gmail.com</a
+                          >
+                        </p>
+                        <!-- <p class="showWork"><strong>About:</strong></p> -->
+                        <p class="showDob">
+                          <strong>Date of bitrh:</strong>February 19,2000
+                        </p>
+                        <p class="showSkill">
+                          <strong>Skills:</strong>
+                          <span class="label label-primary"></span>,
+                          <span class="label label-primary"></span>Drawing,
+                          <span class="label label-primary"></span>Coding
+                          <span class="label label-primary"></span>
+                          <span></span>
+                        </p>
+                      </div>
+                    </div>
+                    <!-- <div class="col-md-6">
+                                        <p><strong>Address:</strong> 5kili, addis abeba,ethiopia</p>
+                                        <p><strong>Phone:</strong> (+251) 9666686371</p>
+                                        <p><strong>Citizenship:</strong> Ethiopian</p>
+                                    </div> -->
+                  </div>
+                  <!-- <div class="row">
+                                    <div class="col-md-6">
+                                        <h2 id="services" class="text-center my-4"></h2>
+                                        <ul id="consultations" class="list-group"></ul>
+                                    </div>
+                                </div> -->
+                </div>
+                <!-- END PROFILE -->
+
+                <!-- BEGIN APPLICATION FORM -->
+                <div class="tab-pane" id="application" style="background-color: #d9edff;">
+                  <form id="submit" class="mt-5 p-3">
+                    <div class="form-group row">
+                      <label class="col-sm-4 col-lg-4"> First Name </label>
+                      <div class="col-sm-8 col-lg-8">
+                        <input
+                          type="text"
+                          id="fn"
+                          class="form-control fn"
+                          placeholder="First name"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-sm-4 col-lg-4"> Last Name </label>
+                      <div class="col-sm-8 col-lg-8">
+                        <input
+                          type="text"
+                          id="ln"
+                          class="form-control ln"
+                          placeholder="Last name"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <!---->
+                    <div class="form-group row">
+                      <label class="col-sm-4 col-lg-4">
+                        Level of Education
+                      </label>
+                      <div class="col-lg-6 col-md-6 col-12">
+                        <!-- <input type="text" id="led"
+                                            class="form-control ln" placeholder="Level of Education"
+                                            required> -->
+                        <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <select
+                              class="form-control select2bs4 led"
+                              name="led"
+                              id="led"
+                              style="width: 315px"
+                            >
+                              <option value="choose">Choose...</option>
+                              <option value="BA">BA</option>
+                              <option value="MA">MA</option>
+                              <option value="BSC">BSC</option>
+                              <option value="MSC">MSC</option>
+                              <option value="PHD">PHD</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!---->
+                    <div class="form-group row">
+                      <label class="col-sm-4 col-lg-4"> Date of Birth </label>
+                      <div class="col-sm-8 col-lg-8">
+                        <input type="date" id="dob" class="form-control dob" />
+                      </div>
+                    </div>
+                    <!---->
+                    <div class="form-group row">
+                      <label class="col-sm-4 col-lg-4"> Email </label>
+                      <div class="col-sm-8 col-lg-8">
+                        <input
+                          type="email"
+                          placeholder="Email"
+                          id="email"
+                          class="form-control email"
+                        />
+                      </div>
+                    </div>
+                    <!---->
+                    <div class="form-group row">
+                      <label class="col-sm-4 col-lg-4"> Gender </label>
+                      <div class="col-lg-6 col-md-6 col-12">
+                        <!-- <input type="text" id="gender"
+                                            class="form-control fn" placeholder="gender"
+                                            required> -->
+                        <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <select
+                              class="form-control select2bs4 gender"
+                              name="led"
+                              id="gender"
+                              style="width: 315px"
+                            >
+                              <option value="choose">Choose...</option>
+                              <option value="Male">Male</option>
+                              <option value="Female">Female</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label class="col-sm-4 col-lg-4"> Skill </label>
+                      <div class="col-sm-8 col-lg-8">
+                        <input
+                          type="text"
+                          id="skill"
+                          class="form-control skill"
+                          placeholder="Skill"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-sm-4 col-lg-4"> Work </label>
+                      <div class="col-sm-8 col-lg-8">
+                        <input
+                          type="text"
+                          id="work"
+                          class="form-control work"
+                          placeholder="Work"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-sm-4 col-lg-4"> CV </label>
+                      <div class="col-sm-8 col-lg-8">
+                        <input
+                          type="file"
+                          id="cv"
+                          class="form-control work"
+                          placeholder="Work"
+                          required
+                          style="height: 30px"
+                        />
+                      </div>
+                    </div>
+                    <!---->
+                    <!---->
+
+                    <!---->
+                    <div class="form-group row justify-content-end">
+                      <div class="col-sm-5">
+                        <input
+                          id="confirm"
+                          type="submit"
+                          class="btn btn-form"
+                          value="submits"
+                        />
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <!-- END  Application -->
+                <div class="tab-pane" id="organization">
+                  <!-- <p class="lead">Orgs</p> -->
+                  <hr />
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-horizontal">
+                        <div class="form-group">
+                          <label class="col-sm-4 control-label"
+                            >Addis Abeba uni</label
+                          >
+                          <div class="col-sm-2">
+                            <input type="checkbox" />
+                          </div>
+                          <label class="col-sm-2 control-label"
+                            >Adama University</label
+                          >
+                          <div class="col-sm-2">
+                            <input type="checkbox" />
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="col-sm-4 control-label"
+                            >Mekele university</label
+                          >
+                          <div class="col-sm-2">
+                            <input type="checkbox" />
+                          </div>
+                          <label class="col-sm-2 control-label"
+                            >Arba minch University</label
+                          >
+                          <div class="col-sm-2">
+                            <input type="checkbox" />
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="col-sm-4 control-label"
+                            >Jimma university</label
+                          >
+                          <div class="col-sm-2">
+                            <input type="checkbox" />
+                          </div>
+                          <label class="col-sm-2 control-label"
+                            >Hawassa university</label
+                          >
+                          <div class="col-sm-2">
+                            <input type="checkbox" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <br />
+                <!-- BEGIN notificaton -->
+                <div class="tab-pane" id="notification">
+                  <br />
+                  <div class="cont">
+                    <div class="blog-slider">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <h2 class="m-5" style="text-align: center">
+                            Privacy Setup
+                          </h2>
+                          <form>
+                            <div class="form-group row">
+                              <label class="col-sm-4 col-lg-4">
+                                Current Password
+                              </label>
+                              <div class="col-sm-8 col-lg-8">
+                                <input
+                                  type="password"
+                                  id="current_password"
+                                  class="form-control"
+                                  placeholder="current password"
+                                  required
+                                />
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label class="col-sm-4 col-lg-4">
+                                New Password
+                              </label>
+                              <div class="col-sm-8 col-lg-8">
+                                <input
+                                  type="password"
+                                  id="new_password"
+                                  class="form-control"
+                                  placeholder="new password"
+                                  required
+                                />
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label class="col-sm-4 col-lg-4">
+                                Confirm New Password
+                              </label>
+                              <div class="col-sm-8 col-lg-8">
+                                <input
+                                  type="password"
+                                  id="repeat_password"
+                                  class="form-control"
+                                  placeholder="confirm new password"
+                                  required
+                                />
+                              </div>
+                            </div>
+                            <!---->
+                            <div class="form-group row justify-content-end">
+                              <div class="col-sm-5">
+                                <button type="submit" class="btn btn-form">
+                                  Change password
+                                </button>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                      <div class="blog-slider__pagination"></div>
+                    </div>
+                  </div>
+                </div>
+                <!-- END notification -->
+
+                <!-- BEGIN organization -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <script src="./assets/js/pro_checkout.js"></script> -->
+    <!-- <script src="./assets/js/pro_app.js"></script> -->
+     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 280"><path fill="#308efc" fill-opacity="1" d="M0,128L60,160C120,192,240,256,360,250.7C480,245,600,171,720,165.3C840,160,960,224,1080,240C1200,256,1320,224,1380,208L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
+    <!-- ...........................................footer............................... -->
+    
+    <footer>
+      <div class="row"> 
+        
+          <div class="col-md-3 col-12" style="margin-left: 4%;">
+            
+                <ul class="links_footer"><li><a href="#">About Us</a></li></ul>
+             
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, veniam. .</p>
+         
+            </div>
+          <div class="col-md-4 col-12" style="margin-left: 4%;">
+            <ul class="links_footer"><li><a href="contact.html">Conatct Us</a></li></ul>
+              <ul class="footer_links">
+                  <li><a href="#"> <span><i class="fa fa-linkedin fa-md"></i></li></a>
+                  <li><a href="#"> <span><i class="fa fa-facebook fa-md"></i></li></a>
+                  <li><a href="#"> <span><i class="fa fa-google-plus fa-md"></i></li></a>
+                  <li><a href="#"> <span><i class="fa fa-instagram fa-md"></i></li></a>
+                  <li><a href="#"> <span><i class="fa fa-telegram fa-md"></i></li></a>
+                  <li><a href="#"> <span><i class="fa fa-linkedin fa-md"></i></li></a>
+              </ul>
+             
+          </div>
+          <div class="col-md-3 col-12" style="margin-left: 4%;">
+            <h3>Help</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit cumque quam corrupti. I</p>
+              <h3>Loacation</h3>
+              <p><i class="fa fa-phone fa-md"></i> (+547)754-3070</p>
+              <p><i class="fa fa-envelope fa-md"></i> info@gmail.com</p>
+             
+          </div>
+      </div>
+      <div class="row">
+         <div class="col-md-4 col-12 d-none d-sm-none d-md-block d-lg-block">
+          <img src="./assets/images/doc.svg" alt=""  width="50%" style="margin-top: -28%; margin-left: 10%;">
+         </div>
+         <div class="col-md-2 col-12 offset-md-1 d-none d-sm-none d-md-block d-lg-block">
+          <img src="./assets/images/teacher.svg" alt=""  width="80%" style="margin-top: -38%;">
+         </div>
+      </div>
+  </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"
+      integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js"
+      integrity="sha384-BOsAfwzjNJHrJ8cZidOg56tcQWfp6y72vEJ8xQ9w6Quywb24iOsW913URv1IS4GD"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
+    <script type="module" src="./assets/model/db.js"></script>
+    <script
+      type="module"
+      src="./assets/controller/db_profile_controller.js"
+    ></script>
+
+    <!-- <script type="module" src="./assets/controller/db_profile_edit.js"></script> -->
+    <script></script>
+  </body>
+</html>

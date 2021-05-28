@@ -55,7 +55,7 @@ def require_auth(function):
     return wrapper
 
 
-@app.route("/")
+@app.route("/index")
 @require_auth
 def index(email):
     try:
@@ -65,7 +65,16 @@ def index(email):
         return redirect(url_for('error'))
 
 
+@app.route("/")
+@require_auth
+def home(email):
+    try:
+        return render_template("home.html")
+    except:
+        return redirect(url_for('error'))
 
+
+        
 @app.route("/register", methods=['GET', 'POST'])
 def register():
     form = RegistrationForm()
